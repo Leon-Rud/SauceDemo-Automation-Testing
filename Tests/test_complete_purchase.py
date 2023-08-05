@@ -3,9 +3,6 @@ from Pages.LoginPage import LoginPage
 from Reports.Log import Logger
 
 
-# TODO update project description more in depth about best prectices: reports, POM, logs, fixtures,etc.
-
-
 class TestCompletePurchase:
 
     @pytest.fixture(scope="class", autouse=True)
