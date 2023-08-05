@@ -93,6 +93,8 @@ class TestCompletePurchase:
         error_message = f'User: "{username}" couldn\'t login the site'
         success_message = f'User: "{username}" successfully logged in the site'
         assert inventory_page.check_products_page_displayed(), error_message
+        if not inventory_page.check_products_page_displayed():
+            Logger.log.error(error_message)
         Logger.log.info(success_message)
 
         inventory_page.logout()
