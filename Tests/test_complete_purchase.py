@@ -2,10 +2,6 @@ import pytest
 from Pages.LoginPage import LoginPage
 from Reports.Log import Logger
 
-# TODO fix git connection
-
-
-# TODO update usage description
 
 # TODO update project description more in depth about best prectices: reports, POM, logs, fixtures,etc.
 
@@ -81,3 +77,22 @@ class TestCompletePurchase:
         inventory_page = checkout_page.click_back_home()
         inventory_page.logout()
 
+    @pytest.mark.parametrize("username, password",
+                             [('standard_user', 'secret_sauce'),
+                              ('locked_out_user', 'secret_sauce'),
+                              ('problem_user', 'secret_sauce'),
+                              ('performance_glitch_user', 'secret_sauce')])
+    def test_all_users_login(self, driver, username, password):
+
+        """
+        Test checks if it's possible to log in with other usernames
+        """
+
+        login_page = LoginPage(driver)
+        inventory_page = login_page.login(username, password)
+        error_message = f'User: "{username}" couldn\'t login the site'
+        success_message = f'User: "{username}" successfully logged in the site'
+        assert inventory_page.check_products_page_displayed(), error_message
+        Logger.log.info(success_message)
+
+        inventory_page.logout()
