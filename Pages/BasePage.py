@@ -28,7 +28,7 @@ class BasePage:
     def send_keys(self, locator: tuple, text: str, timeout=30):
         wait = WebDriverWait(self.driver, timeout)
         element = wait.until(EC.element_to_be_clickable(locator))
-        element.send_keys(element, text)
+        element.send_keys(locator, text)
 
     def wait_and_switch_to_frame(self, locator, timeout=30):
         wait = WebDriverWait(self.driver, timeout)
