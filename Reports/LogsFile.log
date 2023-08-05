@@ -1,0 +1,4 @@
+2023-07-17 20:05:21,752 - INFO - test_purchase_flow - STEP 1 - Add most expensive item to cart
+2023-07-17 20:05:28,258 - INFO - test_purchase_flow - STEP 2 - Remove item, add the second most expensive item and the next item
+2023-07-17 20:05:29,475 - INFO - test_purchase_flow - STEP 3 - Verify the correct product (name and cost) are added in the cart
+2023-07-17 20:05:30,854 - INFO - test_purchase_flow - STEP 4 - Add personal information and verify correct item total displayed
