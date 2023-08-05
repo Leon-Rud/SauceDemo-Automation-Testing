@@ -62,7 +62,7 @@ This project includes tests for various features of the SauceDemo website, such 
 
 The project generates a detailed test execution report after every run, which includes the test case name, the status of the test case, and other relevant details.
 
-![Screenshot 1.png](..%2F..%2FScreenshot%201.png)
+![/Users/leon/Desktop/Leon_Automations/SauceDemoProject/Reports/report_example.png](..%2F..%2FScreenshot%201.png)
 
 ## Contact Information
 
